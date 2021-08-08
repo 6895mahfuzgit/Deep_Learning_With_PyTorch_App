@@ -32,7 +32,17 @@ matrixTensor = torch.tensor([
 
 
 
- 
+x=torch.tensor(4.)
+w=torch.tensor(5.,requires_grad=True)
+b=torch.tensor(6.,requires_grad=True)
+
+y=w*x+b
+print(y)
+y.backward()
+
+print('backword value of x:',x.grad)
+print('backword value of w:',w.grad)
+print('backword value of b:',b.grad)
 
 
 
